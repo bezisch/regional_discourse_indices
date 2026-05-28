@@ -1,0 +1,53 @@
+---
+title: "US GAS Prices"
+author: "Sattiki"
+date: "2026-05-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## This document is 
+
+```{r}
+
+install.packages("EIAapi")
+install.packages("tidyverse")
+install.packages("ggplot2")
+install.packages("jq")
+library(EIAapi)
+library(tidyverse)
+library(ggplot2)
+library(jq)
+```
+```{r}
+# not run
+eia_key <- eia_set_key("XH6BAfw0jn83wuor37ggwPEA98TEDhX58hDlBMWD")
+
+```
+```{r}
+eia_dir()
+```
+
+
+
+```{r}
+
+
+api_key <- Sys.getenv("eia_key")
+
+df1 <- eia_get(api_key =  ("XH6BAfw0jn83wuor37ggwPEA98TEDhX58hDlBMWD"),
+               api_path = "natural-gas/pri/sum/data/",
+               frequency = "monthly",
+               data = "value",
+               facets = NULL,
+               offset = 0,
+               length = 5000,
+               format = "data.frame")
+
+head(df1)
+
+```
+

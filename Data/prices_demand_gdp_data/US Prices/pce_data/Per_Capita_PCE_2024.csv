@@ -1,0 +1,68 @@
+SAPCE2 Per capita personal consumption expenditures (PCE) by major type of product 1,,
+SAPCE2 Per capita personal consumption expenditures (PCE) by major type of product 1,,
+State or DC,,
+GeoFIPS,GeoName,2024
+0,United States,58499
+1000,Alabama,47096
+2000,Alaska,66356
+4000,Arizona,56211
+5000,Arkansas,46259
+6000,California,67565
+8000,Colorado,66448
+9000,Connecticut,66645
+10000,Delaware,60131
+11000,District of Columbia,93713
+12000,Florida,62618
+13000,Georgia,52806
+15000,Hawaii,60711
+16000,Idaho,48098
+17000,Illinois,60612
+18000,Indiana,51821
+19000,Iowa,49473
+20000,Kansas,51082
+21000,Kentucky,48901
+22000,Louisiana,50454
+23000,Maine,63046
+24000,Maryland,58310
+25000,Massachusetts,71946
+26000,Michigan,54197
+27000,Minnesota,58433
+28000,Mississippi,43947
+29000,Missouri,54405
+30000,Montana,58499
+31000,Nebraska,54512
+32000,Nevada,56103
+33000,New Hampshire,68900
+34000,New Jersey,65873
+35000,New Mexico,48119
+36000,New York,66426
+37000,North Carolina,53334
+38000,North Dakota,58090
+39000,Ohio,52708
+40000,Oklahoma,46319
+41000,Oregon,58150
+42000,Pennsylvania,59260
+44000,Rhode Island,58041
+45000,South Carolina,51423
+46000,South Dakota,54100
+47000,Tennessee,51507
+48000,Texas,54060
+49000,Utah,52677
+50000,Vermont,62629
+51000,Virginia,58224
+53000,Washington,62837
+54000,West Virginia,50286
+55000,Wisconsin,54705
+56000,Wyoming,59543
+91000,New England,68190
+92000,Mideast,63706
+93000,Great Lakes,55256
+94000,Plains,54421
+95000,Southeast,54565
+96000,Southwest,53438
+97000,Rocky Mountain,59011
+98000,Far West,65357
+,,
+Legend/Footnotes,,
+1. Per capita PCE estimates are in current dollars. Per capita values are computed from unrounded data. ,,
+"  Last updated: September 26, 2025-- new statistics for 2024; revised statistics for 2020-2023.",,

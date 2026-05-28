@@ -1,0 +1,112 @@
+title: "US GAS Demand"
+date: "2026-05-05"
+output: html_document
+---
+
+
+
+```{r}
+install.packages("EIAapi")
+install.packages("tidyverse")
+install.packages("ggplot2")
+library(EIAapi)
+library(tidyverse)
+library(ggplot2)
+library(httr)
+library(jsonlite)
+```
+```
+```{r}
+## Setting up the paramters for the api including the key and the path, from eia.gov/opendata
+
+api_key  <- "XH6BAfw0jn83wuor37ggwPEA98TEDhX58hDlBMWD"
+api_path <- "gas/cons/sum/data/"
+
+```
+
+
+```{r}
+# Setting up the frequency and dates - between july 2023 and february 2026
+
+frequency <- "monthly"
+start_date <- "2023-07"
+end_date   <- "2026-02"
+
+
+# 2. Separated Date Variables (July 2023 to Feb 2026)
+start_val <- "2023-07"
+end_val   <- "2026-02"
+
+url <- paste0(
+  "https://api.eia.gov/v2/", api_path, 
+  "/?api_key=", api_key,
+  "&frequency=monthly",
+  "&data[0]=value",
+  "&facets[process][]=VGT", # Delivered to Consumers
+  "&facets[process][]=VIN", # Industrial
+  "&facets[process][]=VRS", # Residential
+  "&start=", start_val,
+  "&end=", end_val,
+  "&sort[0][column]=period",
+  "&sort[0][direction]=desc",
+  "&offset=0",
+  "&length=5000"
+)
+
+#Pulling the response using get
+response <- GET(url)
+
+#Parse the JSON content
+
+json_content <- fromJSON(content(response, as = "text", encoding = "UTF-8"))
+
+
+#Extract the data frame, since the dataframe is pulled - November 2021 to June 2023
+df_ng_demand_1 <- json_content$response$data
+
+print(head(df_ng_demand_1 ))
+
+
+# Saving as csv
+write.csv(df_ng_demand_1, file = "df_ng_demand_1.csv")
+
+
+```
+
+
+```{r}
+## Parameters changed between november 2021 to june 2023
+
+frequency <- "monthly"
+start_date <- "2021-11"
+end_date   <- "2023-06"
+
+# URL for the api, we need to include the api key here, maximum length for each query is 5000
+
+url <- paste0(
+  "https://api.eia.gov/v2/", api_path, 
+  "/?api_key=", api_key,
+  "&frequency=monthly&data[0]=value",
+  "&start=", start_date,   
+  "&end=", end_date, 
+  "&facets[process][]=PEU&facets[process][]=PIN&facets[process][]=PRS",
+  "&sort[0][column]=period&sort[0][direction]=desc&length=5000"
+)
+#Pulling the response using get
+response <- GET(url)
+
+#Parse the JSON content
+
+json_content <- fromJSON(content(response, as = "text", encoding = "UTF-8"))
+
+
+#Extract the data frame, since the dataframe is pulled - November 2021 to June 2023
+df_ng_2 <- json_content$response$data
+  
+print(head(df_ng_2 ))
+
+
+# Saving as csv
+write.csv(df_ng_2, file = "df_ng_2.csv")
+```
+

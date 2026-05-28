@@ -1,0 +1,13 @@
+"0","df1 <- eia_get(api_key =  (""XH6BAfw0jn83wuor37ggwPEA98TEDhX58hDlBMWD""),
+               api_path = ""natural-gas/pri/sum/data/"",
+               frequency = ""monthly"",
+               data = ""value"",
+               facets = NULL,
+               offset = 0,
+               length = 5000,
+               format = ""data.frame"")
+"
+"2","Error in eia_get(api_key = (""XH6BAfw0jn83wuor37ggwPEA98TEDhX58hDlBMWD""),  : 
+  Could not pull the data... [0;92m❌[0m
+Check the query parameters (e.g., api key, path, etc.) or the error log
+"

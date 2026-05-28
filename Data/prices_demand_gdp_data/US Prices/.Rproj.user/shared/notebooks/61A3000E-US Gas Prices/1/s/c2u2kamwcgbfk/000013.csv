@@ -1,0 +1,94 @@
+"0","install.packages(""EIAapi"")
+"
+"2","trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.5/EIAapi_0.2.0.tgz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 485301 bytes (473 KB)
+"
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","
+"
+"2","downloaded 473 KB
+
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	/var/folders/1y/zzpks22x19zbbg11y1cb2nq40000gn/T//RtmpUVvOyN/downloaded_packages"
+"1",""
+"1","
+"
+"0","install.packages(""tidyverse"")"
+"0","install.packages(""ggplot2"")"
+"0","install.packages(""jq"")"
+"2","G2;H2;Warningh: package ‘jq’ is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packagesg
+"
+"0","library(EIAapi)"
+"2","G3;
+Attaching package: ‘EIAapi’
+
+g"
+"2","G3;The following object is masked from ‘package:eia’:
+
+    eia_metadata
+
+g"
+"0","library(tidyverse)"
+"0","library(ggplot2)"
+"0","library(jq)"
+"2","Error in library(jq) : there is no package called ‘jq’
+"
